@@ -1,0 +1,15 @@
+name: 'WeComBot-action'
+description: 'Send messages via WeCom Bot'
+inputs:
+  bot-url:
+    description: 'The URL of WeCom Bot'
+    required: true
+  text-message:
+    description: 'The text message to be sent'
+    required: true
+outputs:
+  response:
+    description: 'The response from WeCom Bot HTTP Api'
+runs:
+  using: 'node12'
+  main: 'index.js'
