@@ -12,4 +12,4 @@ outputs:
     description: 'The response from WeCom Bot HTTP Api'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'
