@@ -6,6 +6,7 @@ inputs:
     required: true
   text-message:
     description: 'The text message to be sent'
+    default: "Empty message"
     required: true
 outputs:
   response:
