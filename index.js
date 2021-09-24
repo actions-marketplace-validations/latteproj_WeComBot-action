@@ -30,8 +30,8 @@ axios
   .post(url, body)
   .then(res => {
     console.log(`statusCode: ${res.status}`)
-    console.log(JSON.stringify(res, replacerFunc()))
-    core.setOutput("response", res);
+    // console.log(JSON.stringify(res, replacerFunc()))
+    core.setOutput("response", JSON.stringify(res, replacerFunc()));
   })
   .catch(error => {
     core.setFailed(error.message);
