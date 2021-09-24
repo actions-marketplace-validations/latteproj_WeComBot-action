@@ -13,11 +13,24 @@ try {
     }
 }
 
+const replacerFunc = () => {
+  const visited = new WeakSet();
+  return (key, value) => {
+    if (typeof value === "object" && value !== null) {
+      if (visited.has(value)) {
+        return;
+      }
+      visited.add(value);
+    }
+    return value;
+  };
+};
+
 axios
   .post(url, body)
   .then(res => {
     console.log(`statusCode: ${res.status}`)
-    console.log(res)
+    console.log(JSON.stringify(res, replacerFunc()))
     core.setOutput("response", res);
   })
   .catch(error => {
