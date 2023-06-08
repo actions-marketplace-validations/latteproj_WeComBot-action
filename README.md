@@ -17,7 +17,7 @@ The response returned from WeCom Bot Api.
 
 ## Example usage
 ``` 
-uses: actions/WeComBot-action@v1.0
+uses: actions/WeComBot-action@v1.1
 with:
   bot-url: 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=<key>'
   text-message: 'Hello World!'

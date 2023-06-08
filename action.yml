@@ -1,5 +1,8 @@
 name: 'WeComBot-action'
 description: 'Send messages via WeCom Bot'
+branding:
+  icon: 'message-circle'
+  color: 'gray-dark'
 inputs:
   bot-url:
     description: 'The URL of WeCom Bot'
@@ -12,5 +15,5 @@ outputs:
   response:
     description: 'The response from WeCom Bot HTTP Api'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
